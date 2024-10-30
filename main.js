@@ -27,3 +27,19 @@ function round(value, decimals) {
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+function user(){
+
+}
+
+
+
+let person = prompt("Hello there what is your name?")
+let person3 = prompt("Ok if you don't tell me your name you will have to leave. So what is your name?")
+let person2 = prompt("Umm... Hello? What is your name?")
+if (person != null) 
+
+if (person2 != null) 
+if (person3 != null) 
+display("Game Over")
