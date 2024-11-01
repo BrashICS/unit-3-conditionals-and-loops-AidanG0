@@ -29,18 +29,14 @@ function randInt(min, max) {
 }
 
 
-function user(){
-
-}
-
 document.getElementById("playbutton").addEventListener("click", want_to_play);
 
 function want_to_play() {
-    let play_yn = prompt("Would you like to play? yes or no?")
-    if (play_yn == "yes") {
+    let play_yn = prompt("Would you like to play? Yes=1 No=2")
+    if (play_yn == "1") {
         addEventListener("click", ask_name)
     }
-    if (play_yn == "no"){
+    if (play_yn == "2"){
         addEventListener("click", gameover)}
     if (play_yn == ""){
         addEventListener("click", gameover)}
