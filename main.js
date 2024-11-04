@@ -45,6 +45,7 @@ function ask_name() {
     if (person == "") {
         ask_name2();
     } else {
+        PlayerName = person;
         return PlayerName;
     }
 }
@@ -54,6 +55,7 @@ function ask_name2() {
     if (person2 == "") {
         ask_name3();
     } else {
+        PlayerName = person2;
         return PlayerName;
     }
 }
@@ -63,6 +65,7 @@ function ask_name3() {
     if (person3 == "") {
         gameover();
     } else {
+        PlayerName = person3;
         return PlayerName;
     }
 }
