@@ -30,6 +30,26 @@ function randInt(min, max) {
 
 
 document.getElementById("playbutton").addEventListener("click", want_to_play);
+document.getElementById("optionbutton").addEventListener("click", options);
+document.getElementById("dlcbutton").addEventListener("click", dlc);
+document.getElementById("updatesbutton").addEventListener("click", check_for_updates);
+document.getElementById("exitbutton").addEventListener("click", exit);
+
+
+
+
+function options(){
+    alert("You selected Options.")
+}
+function dlc(){
+    alert("No new DLC at this time.")
+}
+function check_for_updates(){
+    alert("Everything is up to date.")
+}
+function exit(){
+    alert("Bye")
+}
 
 function want_to_play() {
     let play_yn = prompt("Would you like to play? Yes=1 No=2");

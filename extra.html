@@ -93,3 +93,31 @@ function ask_name3() {
 function gameover() {
     window.location.href='game_over.jpg'
 }
+
+
+function menu(){
+    let message = 'Hi! Please make a selection:
+1 - Play
+2 - Options
+3 - DLC
+4 - Check for Updates
+5 - Exit
+'
+let selection = Number(prompt(message));
+
+if (selection == "1") {
+    alert("Let's play!")
+}
+else if (selection == "2") {
+    alert("You selected Options.")
+}
+else if (selection == "3") {
+    alert("No new DLC at this time.")
+}
+else if (selection == "4") {
+    alert("Everything is up to date.")
+}
+else if (selection == "5") {
+    alert("Bye")
+}
+}
