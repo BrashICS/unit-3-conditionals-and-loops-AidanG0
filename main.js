@@ -32,41 +32,41 @@ function randInt(min, max) {
 document.getElementById("playbutton").addEventListener("click", want_to_play);
 
 function want_to_play() {
-    let play_yn = prompt("Would you like to play? Yes=1 No=2")
+    let play_yn = prompt("Would you like to play? Yes=1 No=2");
     if (play_yn == "1") {
-        addEventListener("click", ask_name)
+        ask_name();
+    } else {
+        gameover();
     }
-    if (play_yn == "2"){
-        addEventListener("click", gameover)}
-    if (play_yn == ""){
-        addEventListener("click", gameover)}
 }
+
 function ask_name() {
-    let person = prompt("Hello there what is your name?")
-if (person == ""){
-    addEventListener("click", ask_name2)
+    let person = prompt("Hello there what is your name?");
+    if (person == "") {
+        ask_name2();
+    } else {
+        return PlayerName;
     }
-    if (person)
-    return person
-    
 }
 
 function ask_name2() {
-    let person2 = prompt("Umm... Hello? What is your name?")
-if (person2 == ""){
-    addEventListener("click", ask_name3)
+    let person2 = prompt("Umm... Hello? What is your name?");
+    if (person2 == "") {
+        ask_name3();
+    } else {
+        return PlayerName;
     }
-    if (person2)
-    return person2
 }
+
 function ask_name3() {
-    let person3 = prompt("Ok if you don't tell me your name you will have to leave. So what is your name?")
-    if (person3 == ""){
-    addEventListener("click", gameover)
+    let person3 = prompt("Ok if you don't tell me your name you will have to leave. So what is your name?");
+    if (person3 == "") {
+        gameover();
+    } else {
+        return PlayerName;
     }
-    if (person3)
-    return person3
 }
+
 function gameover() {
-    window.location.href='game_over.jpg'
+    window.location.href = 'game_over.jpg';
 }
