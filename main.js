@@ -30,7 +30,7 @@ function randInt(min, max) {
 
 
 
-document.getElementById("playbutton").addEventListener("click", want_to_play);
+document.getElementById("playbutton").addEventListener("click", difficulty);
 document.getElementById("optionbutton").addEventListener("click", options);
 document.getElementById("dlcbutton").addEventListener("click", dlc);
 document.getElementById("updatebutton").addEventListener("click", check_for_updates);
@@ -62,6 +62,7 @@ else if (selection == 5){
     exit()
 }
 }
+
 
 
 function difficulty(){
@@ -100,11 +101,20 @@ function exit(){
 function want_to_play() {
     let play_yn = prompt("Would you like to play? Yes=1 No=2");
     if (play_yn == "1") {
-        ask_name();
+        document.body.style.backgroundColor = "black";
+        ask_name()
     } else {
         gameover();
     }
 }
+
+
+
+function check_bgc(){
+    if (document.body.style.backgroundColor = "black" === true){
+        ask_name
+    }
+    }
 
 function ask_name() {
     let person = prompt("Hello there what is your name?");
