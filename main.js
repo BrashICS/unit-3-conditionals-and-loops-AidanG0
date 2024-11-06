@@ -28,7 +28,7 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+document.getElementById("gotogamebutton").addEventListener("click", menu);
 document.getElementById("playbutton").addEventListener("click", want_to_play);
 document.getElementById("optionbutton").addEventListener("click", options);
 document.getElementById("dlcbutton").addEventListener("click", dlc);
@@ -36,8 +36,53 @@ document.getElementById("updatesbutton").addEventListener("click", check_for_upd
 document.getElementById("exitbutton").addEventListener("click", exit);
 
 
+function menu(){
+let message = `Hi! Please make a selection:
+1 - Play
+2 - Options
+3 - DLC
+4 - Check for Updates
+5 - Exit
+`
+let selection = Number(prompt(message));
+if (selection == 1){
+difficulty()
+}
+else if (selection == 2){
+    options()
+}
+else if (selection == 3){
+    dlc()
+}
+else if (selection == 4){
+    check_for_updates()
+}
+else if (selection == 5){
+    exit()
+}
+}
 
 
+function difficulty(){
+    let diff = `Please select difficulty:
+    1 - Easy
+    2 - Normal
+    3 - Hard
+    `
+    let diffmode = Number(prompt(diff))
+    if (diffmode == 1){
+alert("Easy mode selected")
+want_to_play()
+    }
+    else if (diffmode == 2){
+        alert("Normal mode selected")
+        want_to_play()
+    }
+    else  if (diffmode == 3){
+        alert("Hard mode selected")
+        want_to_play()
+    }
+}
 function options(){
     alert("You selected Options.")
 }
