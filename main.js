@@ -28,11 +28,12 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-document.getElementById("gotogamebutton").addEventListener("click", menu);
+
+
 document.getElementById("playbutton").addEventListener("click", want_to_play);
 document.getElementById("optionbutton").addEventListener("click", options);
 document.getElementById("dlcbutton").addEventListener("click", dlc);
-document.getElementById("updatesbutton").addEventListener("click", check_for_updates);
+document.getElementById("updatebutton").addEventListener("click", check_for_updates);
 document.getElementById("exitbutton").addEventListener("click", exit);
 
 
