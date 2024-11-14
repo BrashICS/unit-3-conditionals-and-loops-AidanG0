@@ -30,55 +30,80 @@ function randInt(min, max) {
 
 
 document.getElementById("namebutton").addEventListener("click", ask_name);
-document.getElementById("optionbutton").addEventListener("click", options);
 
 
 
+let c=0
 function ask_name() {
     let person = prompt("Hello there what is your name?");
+    if (person == null) {
+        return;
+    } 
     if (person == "") {
         ask_name2();
     } 
-    if (Number(person)) {
-        ask_name_num();
-    }
-    else {
+    if (isNaN(person)) {
         let Name = person;
         return Name;
+    }
+    else {
+        ask_name_num();
     }
 }
 
 function ask_name2() {
     let person2 = prompt("Umm... Hello? What is your name?");
+    if (person2 == null) {
+        return;
+    } 
     if (person2 == "") {
         ask_name3();
     } 
-    if (Number(person2)) {
-        ask_name_num();
-    }
-    else {
+    if (isNaN(person2)) {
         let Name = person2;
         return Name;
+    }
+    else {
+        ask_name_num();
     }
 }
 
 function ask_name_num() {
     let person10 = prompt("That's not a name");
+   
+    if (person10 == null) {
+        return;
+    } 
     if (person10 == "") {
         ask_name3();
     } 
     
-    if (Number(person10)) {
-        
-        ask_name_num();
-    }
-    else {
+    if (isNaN(person10)) {
         let Name = person10;
         return Name;
     }
+    
+    else {
+        if (c==3){
+            let Name = person10;
+            alert(`Ughh, you know what, fine your name is ${Name}🙄😒`)
+        }
+        else{
+    counter()
+    ask_name_num();
+
+    }  
+    }
+}
+function counter() {
+c++
+return c
 }
 function ask_name3() {
     let person3 = prompt("Bro just tell me your name");
+    if (person3 == null) {
+        return;
+    } 
     if (person3 == "") {
         ask_name4();
     } else {
@@ -88,6 +113,9 @@ function ask_name3() {
 }
 function ask_name4() {
     let person4 = prompt("😴");
+    if (person4 == null) {
+        return;
+    } 
     if (person4 == "") {
         ask_name4();
     } else {
