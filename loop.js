@@ -30,7 +30,7 @@ function randInt(min, max) {
 
 
 document.getElementById("namebutton").addEventListener("click", ask_name);
-
+document.getElementById("averagebutton").addEventListener("click", average);
 
 
 let c=0
@@ -124,12 +124,79 @@ function ask_name4() {
     }
 }
 
-function gameover() {
-    window.location.href = 'game_over.jpg';
-}
 
-function playgame(){
 
+function average(){
+    let n1= Number(prompt("Please enter value 1/5"))
+    if (n1 == null) {
+        return
+    } 
+    if (n1 == "") {
+        return
+        
+    } 
+    if (isNaN(n1)) {
+        alert("Thats not a number")
+        average()
+        
+    }
+    else {
+        let n2= Number(prompt("Please enter value 2/5"))
+    if (n2 == null) {
+        return;
+    } 
+    if (n2 == "") {
+        return
+    } 
+    if (isNaN(n2)) {
+        alert("Thats not a number")
+        average()
+    }
+    else {
+        let n3= Number(prompt("Please enter value 3/5"))
+        if (n3 == null) {
+            return;
+        } 
+        if (n3 == "") {
+            return
+        } 
+        if (isNaN(n3)) {
+            alert("Thats not a number")
+            average()
+        }
+        else {
+            let n4= Number(prompt("Please enter value 4/5"))
+        if (n4 == null) {
+            return;
+        } 
+        if (n4 == "") {
+            return
+        } 
+        if (isNaN(n4)) {
+            alert("Thats not a number")
+            average()
+        }
+        else {
+            let n5= Number(prompt("Please enter value 5/5"))
+        if (n5 == null) {
+            return;
+        } 
+        if (n5 == "") {
+            return
+        } 
+        if (isNaN(n5)) {
+            alert("Thats not a number")
+            average()
+        }
+        else {
+            let avg = (n1+n2+n3+n4+n5)/5
+            alert(`The average is ${avg}`)
+            return avg
+        }
+        }
+        }
+    }
+    }
 }
 
 
