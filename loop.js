@@ -211,15 +211,21 @@ function random_until(min, max, stop){
         return -1
     }
     else {
-        let n = Math.floor(Math.random() * (max - min + 1)) + min
+            let n = Math.floor(Math.random() * (max - min + 1)) + min
         rand_unt_counter++
         if (n == stop){
-            return 'it took ${rand_unt_counter} times for it to get ${stop}'
+            return `it took ${rand_unt_counter} times for it to get ${stop}`
         }
+        
         else {
-            go back to line 214  
+            214
             }
         }
     }
 
-
+function print_reverse(str){
+    let spt = str.split("")
+    let rev = spt.reverse()
+    let merge = rev.join("")
+    return merge
+}
