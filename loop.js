@@ -200,7 +200,7 @@ function average(){
 }
 
 function random_until(min, max, stop){
-    let rand_unt_counter=0
+    let rand_unt_counter=1
     if (max <= min){
         return -1
     }
@@ -211,15 +211,12 @@ function random_until(min, max, stop){
         return -1
     }
     else {
-            let n = Math.floor(Math.random() * (max - min + 1)) + min
-        rand_unt_counter++
-        if (n == stop){
-            return `it took ${rand_unt_counter} times for it to get ${stop}`
+        let n = randInt(min, max)
+        while (n != stop){
+            console.log(n = randInt(min, max))
+            rand_unt_counter++
         }
-        
-        else {
-            214
-            }
+            console.log(`it took ${rand_unt_counter} times for it to get ${stop}`)
         }
     }
 
@@ -228,4 +225,8 @@ function print_reverse(str){
     let rev = spt.reverse()
     let merge = rev.join("")
     return merge
+}
+
+function dragons_and_goblins(str){
+    
 }
