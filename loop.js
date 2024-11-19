@@ -228,5 +228,8 @@ function print_reverse(str){
 }
 
 function dragons_and_goblins(str){
-    
+    let D = ((str.split("d")).length)-1
+    let G = ((str.split("g")).length)-1
+    return `Dragons: ${D} 
+    Goblins: ${G}`
 }
