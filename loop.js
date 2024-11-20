@@ -279,7 +279,6 @@ function random_until(min, max, stop){
 
     function print_reverseprmpt(){
         let str= Number(prompt("Please enter something"))
-        let rand_unt_counter=1
         if (str == null) {
                 return
             } 
@@ -312,6 +311,13 @@ function dragons_and_goblins(str){
 }
 
 function substring(mainstring, start, stop){
-let stuff = mainstring.split("")
-
+let stuff = (mainstring.charAt("") > mainstring.charAt(start)) && (mainstring.charAt("") < mainstring.charAt(stop))
+return stuff
 }
+
+
+function fix_pronoun(str){
+let word = str.charAt(0).toUpperCase() + str.toLowerCase().substring(1, str.length)
+return word
+}
+
