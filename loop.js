@@ -340,3 +340,9 @@ function negative_only(){
     }
     while (ask>0)
 }
+
+function parrot(){
+    let stuff = prompt("Say anything")
+    let copy = stuff.toUpperCase()
+    alert(`${copy}`)
+}
