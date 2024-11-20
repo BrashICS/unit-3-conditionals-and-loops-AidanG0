@@ -310,10 +310,7 @@ function dragons_and_goblins(str){
     Goblins: ${G}`
 }
 
-function substring(mainstring, start, stop){
-let stuff = (mainstring.charAt("") > mainstring.charAt(start)) && (mainstring.charAt("") < mainstring.charAt(stop))
-return stuff
-}
+
 
 
 function fix_pronoun(str){
@@ -321,3 +318,17 @@ let word = str.charAt(0).toUpperCase() + str.toLowerCase().substring(1, str.leng
 return word
 }
 
+
+function print_odd(n){
+    let count = -1
+    while (count<n){
+    (count+=2)
+    if (count>n){
+        return
+    }
+    if (count<=n){
+        console.log(count)
+    }
+}
+    return
+}
