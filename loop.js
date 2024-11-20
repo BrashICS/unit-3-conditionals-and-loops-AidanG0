@@ -332,3 +332,11 @@ function print_odd(n){
 }
     return
 }
+
+function negative_only(){
+    let ask
+    do {
+        ask = Number(prompt("Enter a number"))
+    }
+    while (ask>0)
+}
