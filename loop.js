@@ -31,6 +31,9 @@ function randInt(min, max) {
 
 document.getElementById("namebutton").addEventListener("click", ask_name);
 document.getElementById("averagebutton").addEventListener("click", average);
+document.getElementById("randomuntilbutton").addEventListener("click", random_untilprmpt);
+document.getElementById("printreversebutton").addEventListener("click", print_reverseprmpt);
+document.getElementById("dragonsbutton").addEventListener("click", dragons_and_goblins);
 
 
 let c=0
@@ -199,6 +202,59 @@ function average(){
     }
 }
 
+
+function random_untilprmpt(){
+let min= Number(prompt("Please enter the minimmum value"))
+let rand_unt_counter=1
+if (min == null) {
+        return
+    } 
+    if (min == "") {
+        return
+        
+    } 
+    if (isNaN(min)) {
+        alert("Thats not a number")
+        random_untilprmpt()
+        
+    }
+    else {
+        let max= Number(prompt("Please enter the maximmum value"))
+    if (max == null) {
+        return;
+    } 
+    if (max == "") {
+        return
+    } 
+    if (isNaN(max)) {
+        alert("Thats not a number")
+        random_untilprmpt()
+    }
+    else {
+        let stop= Number(prompt("Please enter the stop number"))
+        if (stop == null) {
+            return;
+        } 
+        if (stop == "") {
+            return
+        } 
+        if (isNaN(stop)) {
+            alert("Thats not a number")
+            random_untilprmpt()
+        }
+        else {
+            let ran = randInt(min, max)
+            while (ran != stop){
+                alert(ran = randInt(min, max))
+                rand_unt_counter++
+            }
+                alert(`it took ${rand_unt_counter} times for it to get ${stop}`)
+                
+                return ran
+        }
+    }
+}
+}
 function random_until(min, max, stop){
     let rand_unt_counter=1
     if (max <= min){
@@ -220,6 +276,27 @@ function random_until(min, max, stop){
         }
     }
 
+
+    function print_reverseprmpt(){
+        let str= Number(prompt("Please enter something"))
+        let rand_unt_counter=1
+        if (str == null) {
+                return
+            } 
+            if (str == "") {
+                return
+                
+            } 
+    
+            else {
+    let spt = str.split("")
+    let rev = spt.reverse()
+    let merge = rev.join("")
+    alert(`${merge}`)
+    return merge
+            }
+        }
+
 function print_reverse(str){
     let spt = str.split("")
     let rev = spt.reverse()
@@ -232,4 +309,9 @@ function dragons_and_goblins(str){
     let G = ((str.split("g")).length)-1
     return `Dragons: ${D} 
     Goblins: ${G}`
+}
+
+function substring(mainstring, start, stop){
+let stuff = mainstring.split("")
+
 }
