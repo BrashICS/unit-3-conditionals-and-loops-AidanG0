@@ -344,5 +344,5 @@ function negative_only(){
 function parrot(){
     let stuff = prompt("Say anything")
     let copy = stuff.toUpperCase()
-    alert(`${copy}`)
+    alert(`${copy}!🦜`)
 }
