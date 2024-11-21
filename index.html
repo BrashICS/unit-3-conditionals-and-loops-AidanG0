@@ -6,7 +6,82 @@
         <title>Unit 3 - Conditionals and Loops</title>
         <link rel="icon" href="./images/favicon.png" sizes="any" type="image/png">
         <link rel="stylesheet" href="./style.css">
-        <script src="./main.js" defer></script>
+        
+        <style>
+            .sticky-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+.sticky-to-top2 {
+    position: fixed;
+    bottom: 102px;
+    right: 20px;
+    z-index: 1;
+}
+
+
+div.sticky {
+  position: sticky;
+  top: 0;
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #555555;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #555555;
+}
+
+.button1:hover {
+  background-color: #555555;
+  color: white;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button:active {
+  background-color: #555555;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+        </style>
     </head>
 
     <body>
@@ -43,6 +118,20 @@
 
         </ul>
         
+        <div class="sticky-to-top">
+            <div class="sticky"> 
+              <button id="gotogamebutton" onclick="window.location = 'menu.html'"
+            class="button button1"class="button" style="vertical-align:middle"><span>Go To Game</span></button>
+            </div>
+          </div>
 
+          <div class="sticky-to-top2">
+            <div class="sticky"> 
+              <button id="loopsbutton" onclick="window.location = 'loops.html'"
+            class="button button1"class="button" style="vertical-align:middle"><span>Loops Practice</span></button>
+            </div>
+          </div>
+
+          
     </body>
 </html>

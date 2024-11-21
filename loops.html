@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <script src="./loop.js" defer></script>
+    <style>
+
+
+
+div.sticky {
+position: sticky;
+top: 0;
+.button {
+display: inline-block;
+padding: 15px 25px;
+font-size: 24px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+outline: none;
+color: #000000;
+background-color: #ffffff;
+border: 2px solid #555555;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+}
+
+
+
+
+.button1 {
+background-color: white; 
+color: black; 
+border: 2px solid #555555;
+}
+
+.button1:hover {
+background-color: #555555;
+color: white;
+}
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+.button:active {
+background-color: #555555;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
+</style>
+    <title>Loops</title>
+  </head>
+
+
+    <body>
+        <div class="sticky"> 
+            <button id="namebutton" 
+          class="button button1"class="button" style="vertical-align:middle"><span>Ask Name</span></button>
+          </div>
+  <br>
+  <div class="sticky"> 
+    <button id="averagebutton" 
+  class="button button1"class="button" style="vertical-align:middle"><span>Average</span></button>
+  </div>
+  <br>
+  <div class="sticky"> 
+    <button id="randomuntilbutton" 
+  class="button button1"class="button" style="vertical-align:middle"><span>Random Until</span></button>
+  </div>
+<br>
+<div class="sticky"> 
+  <button id="printreversebutton" 
+class="button button1"class="button" style="vertical-align:middle"><span>Print Reverse</span></button>
+</div>
+<br>
+<div class="sticky"> 
+  <button id="dragonsbutton" 
+class="button button1"class="button" style="vertical-align:middle"><span>Dragons And Goblins</span></button>
+</div>
+<br>
+
+  </body>
+  
+</html>
+
